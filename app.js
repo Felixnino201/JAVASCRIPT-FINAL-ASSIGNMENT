@@ -15,7 +15,7 @@ window.addEventListener("load", (evt) => {
     async function locationFinder(city) {
         try {
             if (city) {
-                const locationFinderAPI = https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${apiKey};
+                const locationFinderAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${apiKey}`;
                 const res1 = await fetch(locationFinderAPI);
                 const locationData = await res1.json();
                 if (locationData.length != 0) {
